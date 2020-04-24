@@ -4,37 +4,24 @@ namespace App;
 
 use MF\Init\Bootstrap;
 
-class Route extends Bootstrap   {
+class Route extends Bootstrap {
 
-     //configurar as rotas que vamos ter
+	protected function initRoutes() {
 
-     protected function initRoutes(){
-        //definir as rotas
-        //home
-        $routes['home'] = array(
-                //deninir rota
-            'route' => '/',
-            //controlador
-            'controller' => 'indexController',
-            //qual a ação
-            'action' => 'index'
+		$routes['home'] = array(
+			'route' => '/',
+			'controller' => 'indexController',
+			'action' => 'index'
+		);
 
-        );
-        //sobre nos 
-        $routes['sobre_nos'] = array(
-            //deninir rota
-        'route' => '/sobre_nos',
-        //controlador
-        'controller' => 'indexController',
-        //qual a ação
-        'action' => 'sobreNos'
-        );
-            $this->setRoutes($routes);
-    }
+		$routes['sobre_nos'] = array(
+			'route' => '/sobre_nos',
+			'controller' => 'indexController',
+			'action' => 'sobreNos'
+		);
 
-  
-
- 
+		$this->setRoutes($routes);
+	}
 
 }
 
